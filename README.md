@@ -1,23 +1,7 @@
-# BACK-END FRAMEWORKS UNINASSAU OLINDA
+# Welcome!
 
-# # ATA Digital - Workshop Django (quinta 18/Set)
-- Prof. Mentor Cloves Rocha;
-- Douglas Felipe;
-- Odenir de Vasconcelos;
-- Maria Luísa Rodrigues;
-- Paulo Gabriel 
-- Júlia Cardoso;
-- Aylanna Santos;
-- Matheus Teófilo;
-- João Victor Azevedo de Sena- 01707269
-- Levi Dornelas
-- Alysson gomes dos Rez
-- Lindalva Evellyn Ferreira
-- Arthur Layme Galdino
-- Thiago Henrique Rodrigues Couceiro
-- Anderson da Silva Bezerra
-- Gabriel Cauã Leal Vieira
-- Ruan Gabriel Alves de Lima
-- Flavia Milano
-- Pedro Gabriel Siqueira dos Santos
-- Luana Chaves Freire
+# Subject: BACK-END FRAMEWORKS (BEF)
+The Purpose, Project, and Challenges-based method is an active learning and management approach (often associated with Project-Based Learning - PBL or Challenge-Based Learning - CBL) focused on giving practical meaning to learning or work, connecting intention to real action.
+
+- Prof. Mentor Cloves Rocha
+- ...
