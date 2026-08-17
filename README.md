@@ -5,3 +5,4 @@ The Purpose, Project, and Challenges-based method is an active learning and mana
 
 - Prof. Mentor Cloves Rocha
 - Daniel William da Silva 
+- Marcos Matheus Gomes Nerys 
