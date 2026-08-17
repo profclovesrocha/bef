@@ -9,3 +9,16 @@ Grading
 - Prof. Mentor Cloves Rocha
 - Daniel William da Silva 
 - Marcos Matheus Gomes Nerys 
+
+# BEF Groups
+- Leader / FRAMEWORKS 
+1. Cauã / JS
+2. Arthur Marcos / Spring Boot
+3. Eduardo / Flask
+4. Vinicius / JS
+5. Ian / Flask
+6. Gabriel Arruda / Spring Boot
+7. Vitória / Spring Boot
+8. Daniel / Spring Boot
+9. ?
+10. ? 
