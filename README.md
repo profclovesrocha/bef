@@ -12,7 +12,7 @@ Grading
 - Prof. Mentor Cloves Rocha
 - Daniel William da Silva 
 - Marcos Matheus Gomes Nerys 
-
+- João Marcos Rodriguês de Melo 
 # BEF Groups
 - Leader / FRAMEWORKS 
 1. Cauã / JS
