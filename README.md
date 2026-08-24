@@ -12,6 +12,9 @@ Grading
 - Prof. Mentor Cloves Rocha
 - Daniel William da Silva 
 - Marcos Matheus Gomes Nerys 
+- Maria Vitória Albuquerque Cunha 
+- Gheovana Pietra Araújo dos Santos 
+- Sérgio José Galdino da Silva Junior 
 
 # BEF Groups
 - Leader / FRAMEWORKS 
@@ -21,7 +24,7 @@ Grading
 4. Vinicius / JS
 5. Ian / Flask
 6. Gabriel Arruda, João Marcos / Spring Boot
-7. Vitória / Spring Boot
+7. Maria Vitória,Gheovana,Sérgio / Spring Boot
 8. Daniel / Spring Boot
 9. Luiz Henrique Nolasco / JS
 10. ? 
