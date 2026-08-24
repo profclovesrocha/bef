@@ -7,7 +7,8 @@ The coordination and administration of Uninassau Olinda have decided that the se
 
 Grading
 - AV1 Written Exam (ENADE style)
-- AV2 Project Seminars (15 min. per team)+
+- AV2 Project Seminars (15 min. per team) + written exam for 20% of the AV2 grade.
+
   
 - Prof. Mentor Cloves Rocha
 - Daniel William da Silva 
