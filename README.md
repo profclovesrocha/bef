@@ -20,7 +20,7 @@ Grading
 3. Eduardo / Flask
 4. Vinicius / JS
 5. Ian / Flask
-6. Gabriel Arruda / Spring Boot
+6. Gabriel Arruda, João Marcos / Spring Boot
 7. Vitória / Spring Boot
 8. Daniel / Spring Boot
 9. Luiz Henrique Nolasco / JS
