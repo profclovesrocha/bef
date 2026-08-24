@@ -30,6 +30,8 @@ Grading
 9. Luiz Henrique Nolasco / JS
 10. ? 
 
+# Mind Map 
 <img width="4080" height="5337" alt="NotebookLM Mind Map (8)" src="https://github.com/user-attachments/assets/896df117-13a3-41cc-a515-5a082ca2c981" />
 
+# Back-End Frameworks Course_Blueprint 
 <img width="2752" height="1536" alt="Back-End_Frameworks_Course_Blueprint" src="https://github.com/user-attachments/assets/62d5f6bc-5b3b-4ab5-90e2-2901e6741b0f" />
