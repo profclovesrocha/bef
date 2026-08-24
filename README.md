@@ -23,5 +23,5 @@ Grading
 6. Gabriel Arruda / Spring Boot
 7. Vitória / Spring Boot
 8. Daniel / Spring Boot
-9. ?
+9. Luiz Henrique Nolasco / JS
 10. ? 
