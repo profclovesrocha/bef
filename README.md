@@ -24,7 +24,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 1. Cauã / JS
 2. Arthur Marcos / Spring Boot
 3. Eduardo / Flask
-4. Vinicius / JS
+4. Vinicius / Flask
 5. Ian / Flask
 6. Gabriel Arruda, João Marcos / Spring Boot
 7. Maria Vitória,Gheovana,Sérgio / Spring Boot
