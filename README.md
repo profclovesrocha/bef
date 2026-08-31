@@ -20,6 +20,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Isaac Alves Camelo Pessoa
 - Emanuelly Araujo Alves de Lima
 - Hanna Peixoto Parente de Araujo 
+- Pedro henrique josé de Oliveira Silva 
 
 # BEF Groups
 - Leader / FRAMEWORKS 
