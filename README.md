@@ -35,9 +35,9 @@ The coordination and administration of Uninassau Olinda have decided that the se
 3. Eduardo / Flask
 4. Vinicius / Flask
 5. Ian Medeiros, Vinícius Gaspar, Guilherme Lins, Renan Victor / Flask
-6. Gabriel Arruda, João Marcos / Spring Boot
+6. Gabriel Arruda, João Marcos,Alexandre Costa, Arthur Moraes, Jonathan Freitas, Kauã Vinicius Correia,Marcos Matheus/ Spring Boot
 7. Maria Vitória,Gheovana,Sérgio / Spring Boot
-8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose  / Spring Boot
+8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose, Ingrid Motta Santos  / Spring Boot
 9. Luiz Henrique Nolasco / JS
 10. Isaac Alves / JS
 
