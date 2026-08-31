@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.docmanager.document.DocumentIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.01 s -- in com.docmanager.document.DocumentIntegrationTest

@@ -1,0 +1,10 @@
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\config\StorageConfig.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\config\StorageProperties.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\controller\StorageController.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\factory\StorageStrategyFactory.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\service\StorageService.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\service\StorageServiceImpl.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\StorageServiceApplication.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\strategy\LocalStorageStrategy.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\strategy\StorageStrategy.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-storage-service\src\main\java\com\docmanager\storage\web\StorageWebController.java

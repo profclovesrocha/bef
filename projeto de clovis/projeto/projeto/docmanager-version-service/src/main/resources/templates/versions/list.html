@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Versões do documento')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <div class="toolbar">
+        <div>
+            <h1>Versões do documento</h1>
+            <p class="subtitle"><code class="key" th:text="${documentId}"></code></p>
+        </div>
+        <a class="btn btn-primary" th:href="@{/web/versions/new(documentId=${documentId})}">+ Nova versão</a>
+    </div>
+
+    <div class="alert alert-success" th:if="${success}" th:text="${success}"></div>
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <table th:if="${page.content != null and !page.content.isEmpty()}">
+        <thead>
+        <tr>
+            <th>Versão</th>
+            <th>Descrição da alteração</th>
+            <th>Tamanho</th>
+            <th>Criado por</th>
+            <th>Criado em</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="v : ${page.content}">
+            <td><span class="badge" th:text="'v' + ${v.versionNumber}"></span></td>
+            <td th:text="${v.changeDescription} ?: '—'"></td>
+            <td th:text="${v.fileSize} != null ? ${v.fileSize} + ' bytes' : '—'"></td>
+            <td th:text="${v.createdBy} ?: '—'"></td>
+            <td th:text="${v.createdAt}"></td>
+            <td class="actions">
+                <a class="btn btn-secondary btn-sm" th:href="@{/web/versions/{id}(id=${v.id})}">Ver</a>
+                <form method="post" th:action="@{/web/versions/{id}/restore(id=${v.id})}">
+                    <button class="btn btn-secondary btn-sm" type="submit">Restaurar</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="empty-state" th:if="${page.content == null or page.content.isEmpty()}">
+        Nenhuma versão encontrada para este documento.
+    </div>
+
+    <p><a th:href="@{/web/versions}">← Voltar à busca</a></p>
+</main>
+</body>
+</html>

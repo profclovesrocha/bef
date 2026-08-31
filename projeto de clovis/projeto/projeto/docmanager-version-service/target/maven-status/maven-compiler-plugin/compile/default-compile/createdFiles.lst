@@ -1,0 +1,13 @@
+com\docmanager\version\VersionServiceApplication.class
+com\docmanager\version\repository\ChangeLogRepository.class
+com\docmanager\version\entity\ChangeLog.class
+com\docmanager\version\mapper\VersionMapper.class
+com\docmanager\version\entity\DocumentVersion$DocumentVersionBuilder.class
+com\docmanager\version\service\VersionService.class
+com\docmanager\version\repository\VersionRepository.class
+com\docmanager\version\entity\ChangeLog$ChangeLogBuilder.class
+com\docmanager\version\controller\VersionController.class
+com\docmanager\version\service\VersionServiceImpl.class
+com\docmanager\version\web\VersionWebController.class
+com\docmanager\version\entity\DocumentVersion.class
+com\docmanager\version\config\VersionConfig.class

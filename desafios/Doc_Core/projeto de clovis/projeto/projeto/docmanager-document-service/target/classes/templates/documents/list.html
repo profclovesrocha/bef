@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Documentos')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <div class="toolbar">
+        <div>
+            <h1>Documentos</h1>
+            <p class="subtitle">Gerenciamento de documentos (View · Controller: DocumentWebController · Model: DocumentDTO)</p>
+        </div>
+        <a class="btn btn-primary" th:href="@{/web/documents/new}">+ Novo documento</a>
+    </div>
+
+    <div class="alert alert-success" th:if="${success}" th:text="${success}"></div>
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <div class="card">
+        <form method="get" th:action="@{/web/documents}" style="display:flex; gap:8px; margin-bottom: 4px;">
+            <input type="text" name="name" placeholder="Buscar por nome..." th:value="${param.name}"/>
+            <input type="text" name="fileType" placeholder="Tipo de arquivo..." th:value="${param.fileType}" style="max-width:180px;"/>
+            <button class="btn btn-secondary" type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <table th:if="${page.content != null and !page.content.isEmpty()}">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Tamanho</th>
+            <th>Versão</th>
+            <th>Criado em</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="doc : ${page.content}">
+            <td th:text="${doc.name}"></td>
+            <td><span class="badge" th:text="${doc.fileType} ?: '—'"></span></td>
+            <td th:text="${doc.fileSize} != null ? ${doc.fileSize} + ' bytes' : '—'"></td>
+            <td th:text="${doc.currentVersion}"></td>
+            <td th:text="${doc.createdAt}"></td>
+            <td class="actions">
+                <a class="btn btn-secondary btn-sm" th:href="@{/web/documents/{id}(id=${doc.id})}">Ver</a>
+                <a class="btn btn-secondary btn-sm" th:href="@{/web/documents/{id}/edit(id=${doc.id})}">Editar</a>
+                <form method="post" th:action="@{/web/documents/{id}/delete(id=${doc.id})}"
+                      onsubmit="return confirm('Excluir este documento?');">
+                    <button class="btn btn-danger btn-sm" type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="empty-state" th:if="${page.content == null or page.content.isEmpty()}">
+        Nenhum documento encontrado.
+    </div>
+
+    <div class="pagination" th:if="${page.totalPages > 1}">
+        <a th:each="i : ${#numbers.sequence(0, page.totalPages - 1)}"
+           th:href="@{/web/documents(page=${i}, name=${param.name}, fileType=${param.fileType})}"
+           th:text="${i + 1}"
+           th:class="${i == page.page} ? 'current' : ''"></a>
+    </div>
+</main>
+</body>
+</html>

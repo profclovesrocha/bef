@@ -1,0 +1,10 @@
+com\docmanager\storage\factory\StorageStrategyFactory.class
+com\docmanager\storage\service\StorageService.class
+com\docmanager\storage\service\StorageServiceImpl.class
+com\docmanager\storage\config\StorageProperties.class
+com\docmanager\storage\config\StorageConfig.class
+com\docmanager\storage\strategy\StorageStrategy.class
+com\docmanager\storage\web\StorageWebController.class
+com\docmanager\storage\controller\StorageController.class
+com\docmanager\storage\strategy\LocalStorageStrategy.class
+com\docmanager\storage\StorageServiceApplication.class

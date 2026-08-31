@@ -1,0 +1,12 @@
+com\docmanager\metadata\config\MetadataConfig.class
+com\docmanager\metadata\web\MetadataWebController.class
+com\docmanager\metadata\entity\Metadata$MetadataBuilder.class
+com\docmanager\metadata\mapper\MetadataMapper.class
+com\docmanager\metadata\entity\MetadataEntry$MetadataEntryBuilder.class
+com\docmanager\metadata\entity\MetadataEntry.class
+com\docmanager\metadata\controller\MetadataController.class
+com\docmanager\metadata\repository\MetadataRepository.class
+com\docmanager\metadata\service\MetadataService.class
+com\docmanager\metadata\service\MetadataServiceImpl.class
+com\docmanager\metadata\MetadataServiceApplication.class
+com\docmanager\metadata\entity\Metadata.class

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${metadata != null} ? 'Editar Metadado' : 'Novo Metadado')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <h1 th:text="${metadata != null} ? 'Editar metadado' : 'Novo metadado'"></h1>
+    <p class="subtitle">Preencha os dados abaixo. Tags separadas por vírgula.</p>
+
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <div class="card">
+        <form method="post"
+              th:action="${metadata != null} ? @{/web/metadata/{id}(id=${metadata.id})} : @{/web/metadata}">
+            <div class="form-group">
+                <label>ID do documento *</label>
+                <input type="text" name="documentId" required
+                       th:value="${metadata != null} ? ${metadata.documentId} : ${param.documentId}"
+                       placeholder="UUID do documento"/>
+            </div>
+            <div class="form-group">
+                <label>Categoria</label>
+                <input type="text" name="category" maxlength="100"
+                       th:value="${metadata != null} ? ${metadata.category} : ''"/>
+            </div>
+            <div class="form-group">
+                <label>Tags (separadas por vírgula)</label>
+                <input type="text" name="tagsCsv" th:value="${tagsCsv} ?: ''"/>
+            </div>
+            <button class="btn btn-primary" type="submit" th:text="${metadata != null} ? 'Atualizar' : 'Salvar'"></button>
+            <a class="btn btn-secondary" th:href="@{/web/metadata}">Cancelar</a>
+        </form>
+    </div>
+</main>
+</body>
+</html>

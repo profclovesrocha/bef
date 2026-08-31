@@ -1,0 +1,8 @@
+com\docmanager\document\service\DocumentServiceImplTest$DownloadTests.class
+com\docmanager\document\service\DocumentServiceImplTest$DeleteTests.class
+com\docmanager\document\service\DocumentServiceImplTest$CreateTests.class
+com\docmanager\document\service\DocumentServiceImplTest$UpdateTests.class
+com\docmanager\document\controller\DocumentControllerTest.class
+com\docmanager\document\service\DocumentServiceImplTest.class
+com\docmanager\document\DocumentIntegrationTest.class
+com\docmanager\document\service\DocumentServiceImplTest$FindTests.class

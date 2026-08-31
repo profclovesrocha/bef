@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Metadados')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <div class="toolbar">
+        <div>
+            <h1>Metadados</h1>
+            <p class="subtitle">View · Controller: MetadataWebController · Model: MetadataDTO</p>
+        </div>
+        <a class="btn btn-primary" th:href="@{/web/metadata/new}">+ Novo metadado</a>
+    </div>
+
+    <div class="alert alert-success" th:if="${success}" th:text="${success}"></div>
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <div class="card">
+        <form method="get" th:action="@{/web/metadata}" style="display:flex; gap:8px;">
+            <input type="text" name="category" placeholder="Categoria..." th:value="${param.category}"/>
+            <input type="text" name="tag" placeholder="Tag..." th:value="${param.tag}"/>
+            <button class="btn btn-secondary" type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <table th:if="${page.content != null and !page.content.isEmpty()}">
+        <thead>
+        <tr>
+            <th>Documento (ID)</th>
+            <th>Categoria</th>
+            <th>Tags</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="m : ${page.content}">
+            <td><code class="key" th:text="${m.documentId}"></code></td>
+            <td th:text="${m.category} ?: '—'"></td>
+            <td>
+                <span class="badge" th:each="t : ${m.tags}" th:text="${t}" style="margin-right:4px;"></span>
+            </td>
+            <td class="actions">
+                <a class="btn btn-secondary btn-sm" th:href="@{/web/metadata/{id}(id=${m.id})}">Ver</a>
+                <a class="btn btn-secondary btn-sm" th:href="@{/web/metadata/{id}/edit(id=${m.id})}">Editar</a>
+                <form method="post" th:action="@{/web/metadata/{id}/delete(id=${m.id})}"
+                      onsubmit="return confirm('Excluir estes metadados?');">
+                    <button class="btn btn-danger btn-sm" type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="empty-state" th:if="${page.content == null or page.content.isEmpty()}">
+        Nenhum metadado encontrado.
+    </div>
+
+    <div class="pagination" th:if="${page.totalPages > 1}">
+        <a th:each="i : ${#numbers.sequence(0, page.totalPages - 1)}"
+           th:href="@{/web/metadata(page=${i}, category=${param.category}, tag=${param.tag})}"
+           th:text="${i + 1}"
+           th:class="${i == page.page} ? 'current' : ''"></a>
+    </div>
+</main>
+</body>
+</html>

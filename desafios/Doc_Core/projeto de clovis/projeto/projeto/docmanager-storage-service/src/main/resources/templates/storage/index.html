@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Armazenamento')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <h1>Armazenamento de arquivos</h1>
+    <p class="subtitle">View · Controller: StorageWebController · Model: StorageResultDTO</p>
+
+    <div class="alert alert-success" th:if="${success}" th:text="${success}"></div>
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <div class="card">
+        <h2>Upload de arquivo</h2>
+        <form method="post" th:action="@{/web/storage/upload}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Arquivo</label>
+                <input type="file" name="file" required/>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+
+        <div th:if="${result}" style="margin-top: 16px;">
+            <p><strong>Chave de armazenamento:</strong> <code class="key" th:text="${result.storageKey}"></code></p>
+            <p><strong>Tipo:</strong> <span th:text="${result.contentType}"></span></p>
+            <p><strong>Tamanho:</strong> <span th:text="${result.size} + ' bytes'"></span></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Gerenciar por chave</h2>
+        <form method="get" th:action="@{/web/storage/check}" style="display:flex; gap:8px; margin-bottom: 10px;">
+            <input type="text" name="key" placeholder="Chave de armazenamento" th:value="${param.key}" required/>
+            <button class="btn btn-secondary" type="submit">Verificar</button>
+        </form>
+
+        <div th:if="${checkedKey}">
+            <p><strong>Chave:</strong> <code class="key" th:text="${checkedKey}"></code> —
+                <span th:if="${exists}" class="badge">existe</span>
+                <span th:unless="${exists}" style="color:#991b1b;">não encontrada</span>
+            </p>
+            <div class="actions" th:if="${exists}">
+                <a class="btn btn-secondary btn-sm" th:href="@{/web/storage/{key}/download(key=${checkedKey})}">Download</a>
+                <form method="post" th:action="@{/web/storage/{key}/delete(key=${checkedKey})}"
+                      onsubmit="return confirm('Remover este arquivo?');">
+                    <button class="btn btn-danger btn-sm" type="submit">Remover</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

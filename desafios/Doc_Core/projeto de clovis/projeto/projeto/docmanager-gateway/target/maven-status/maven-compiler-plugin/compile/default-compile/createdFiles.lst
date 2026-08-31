@@ -1,0 +1,4 @@
+com\docmanager\gateway\GatewayApplication.class
+com\docmanager\gateway\config\GatewayRoutesConfig.class
+com\docmanager\gateway\filter\CorsFilter.class
+com\docmanager\gateway\filter\LoggingFilter.class

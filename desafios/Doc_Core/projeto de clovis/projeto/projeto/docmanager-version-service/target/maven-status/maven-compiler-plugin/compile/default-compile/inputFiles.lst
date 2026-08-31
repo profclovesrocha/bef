@@ -1,0 +1,11 @@
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\config\VersionConfig.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\controller\VersionController.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\entity\ChangeLog.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\entity\DocumentVersion.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\mapper\VersionMapper.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\repository\ChangeLogRepository.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\repository\VersionRepository.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\service\VersionService.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\service\VersionServiceImpl.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\VersionServiceApplication.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-version-service\src\main\java\com\docmanager\version\web\VersionWebController.java

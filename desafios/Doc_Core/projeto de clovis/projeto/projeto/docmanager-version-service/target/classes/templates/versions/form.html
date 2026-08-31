@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Nova Versão')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <h1>Nova versão</h1>
+    <p class="subtitle">Registra uma nova versão para um documento existente.</p>
+
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <div class="card">
+        <form method="post" th:action="@{/web/versions}">
+            <div class="form-group">
+                <label>ID do documento *</label>
+                <input type="text" name="documentId" required th:value="${param.documentId}"/>
+            </div>
+            <div class="form-group">
+                <label>Descrição da alteração</label>
+                <textarea name="changeDescription" maxlength="500"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Criado por</label>
+                <input type="text" name="createdBy"/>
+            </div>
+            <div class="form-group">
+                <label>Chave de armazenamento (opcional)</label>
+                <input type="text" name="storageKey"/>
+            </div>
+            <div class="form-group">
+                <label>Tamanho do arquivo em bytes (opcional)</label>
+                <input type="text" name="fileSize"/>
+            </div>
+            <div class="form-group">
+                <label>Checksum (opcional)</label>
+                <input type="text" name="checksum"/>
+            </div>
+            <button class="btn btn-primary" type="submit">Salvar</button>
+            <a class="btn btn-secondary" th:href="@{/web/versions}">Cancelar</a>
+        </form>
+    </div>
+</main>
+</body>
+</html>

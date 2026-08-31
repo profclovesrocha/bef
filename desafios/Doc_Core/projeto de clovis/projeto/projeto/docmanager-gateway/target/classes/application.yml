@@ -1,0 +1,34 @@
+# ==========================================
+# DocManager API Gateway
+# Ponto de entrada único — porta 8080
+# ==========================================
+spring:
+  application:
+    name: docmanager-gateway
+  main:
+    web-application-type: reactive
+
+server:
+  port: 8080
+
+# URLs dos microsserviços (sobrescritas pelo Docker Compose)
+docmanager:
+  services:
+    document-url: http://localhost:8081
+    storage-url: http://localhost:8082
+    metadata-url: http://localhost:8083
+    version-url: http://localhost:8084
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway
+  endpoint:
+    gateway:
+      enabled: true
+
+logging:
+  level:
+    com.docmanager.gateway: INFO
+    org.springframework.cloud.gateway: INFO

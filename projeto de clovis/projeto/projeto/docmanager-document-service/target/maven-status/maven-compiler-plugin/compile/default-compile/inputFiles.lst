@@ -1,0 +1,12 @@
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\client\MetadataClient.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\client\StorageClient.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\client\VersionClient.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\config\AppConfig.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\controller\DocumentController.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\DocumentServiceApplication.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\entity\Document.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\mapper\DocumentMapper.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\repository\DocumentRepository.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\service\DocumentService.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\service\DocumentServiceImpl.java
+C:\Users\danie\Documents\projeto\projeto\docmanager-document-service\src\main\java\com\docmanager\document\web\DocumentWebController.java

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Metadado')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <div class="toolbar">
+        <h1>Metadado</h1>
+        <div class="actions">
+            <a class="btn btn-secondary" th:href="@{/web/metadata/{id}/edit(id=${metadata.id})}">Editar</a>
+            <a class="btn btn-secondary" th:href="@{/web/metadata}">Voltar</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <p><strong>ID:</strong> <code class="key" th:text="${metadata.id}"></code></p>
+        <p><strong>Documento:</strong> <code class="key" th:text="${metadata.documentId}"></code></p>
+        <p><strong>Categoria:</strong> <span th:text="${metadata.category} ?: '—'"></span></p>
+        <p><strong>Tags:</strong>
+            <span class="badge" th:each="t : ${metadata.tags}" th:text="${t}" style="margin-right:4px;"></span>
+            <span th:if="${metadata.tags == null or metadata.tags.isEmpty()}">—</span>
+        </p>
+        <p><strong>Propriedades customizadas:</strong></p>
+        <ul>
+            <li th:each="p : ${metadata.customProperties}" th:text="${p.key} + ': ' + ${p.value}"></li>
+        </ul>
+        <p><strong>Criado em:</strong> <span th:text="${metadata.createdAt}"></span></p>
+        <p><strong>Atualizado em:</strong> <span th:text="${metadata.updatedAt}"></span></p>
+    </div>
+</main>
+</body>
+</html>

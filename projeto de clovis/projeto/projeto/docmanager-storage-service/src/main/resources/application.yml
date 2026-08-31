@@ -1,0 +1,34 @@
+# ==========================================
+# Storage Service - Configuração
+# ==========================================
+spring:
+  application:
+    name: storage-service
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 55MB
+
+server:
+  port: 8082
+
+# Configuração de armazenamento
+docmanager:
+  storage:
+    type: LOCAL
+    local-path: ./storage-data
+
+# Swagger
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

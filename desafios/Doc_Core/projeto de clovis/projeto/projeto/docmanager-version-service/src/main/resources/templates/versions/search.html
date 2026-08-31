@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Versões')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <h1>Versionamento de documentos</h1>
+    <p class="subtitle">View · Controller: VersionWebController · Model: VersionDTO</p>
+
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <div class="card">
+        <h2>Ver versões de um documento</h2>
+        <form method="get" th:action="@{/web/versions/document}" style="display:flex; gap:8px;">
+            <input type="text" name="documentId" placeholder="UUID do documento" required style="flex:1;"/>
+            <button class="btn btn-secondary" type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Registrar nova versão</h2>
+        <a class="btn btn-primary" th:href="@{/web/versions/new}">+ Nova versão</a>
+    </div>
+</main>
+</body>
+</html>

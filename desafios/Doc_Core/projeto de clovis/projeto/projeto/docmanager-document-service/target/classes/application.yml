@@ -1,0 +1,88 @@
+# ==========================================
+# Document Service - Configuração
+# ==========================================
+spring:
+  application:
+    name: document-service
+
+  # Perfil ativo (dev ou prod)
+  profiles:
+    active: dev
+
+  # Configuração de upload
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 55MB
+
+  # JPA
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+# Porta do serviço
+server:
+  port: 8081
+
+# URLs dos outros microsserviços
+docmanager:
+  services:
+    storage-url: http://localhost:8082
+    metadata-url: http://localhost:8083
+    version-url: http://localhost:8084
+
+# Swagger
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+---
+# ==========================================
+# Perfil DEV - H2 em memória
+# ==========================================
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:h2:mem:docmanagerdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    show-sql: true
+
+---
+# ==========================================
+# Perfil PROD - PostgreSQL
+# ==========================================
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:postgresql://localhost:5432/docmanager
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME:docmanager}
+    password: ${DB_PASSWORD:docmanager}
+  jpa:
+    hibernate:
+      ddl-auto: validate

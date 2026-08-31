@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Versão')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <div class="toolbar">
+        <h1 th:text="'Versão ' + ${version.versionNumber}"></h1>
+        <div class="actions">
+            <form method="post" th:action="@{/web/versions/{id}/restore(id=${version.id})}">
+                <button class="btn btn-secondary" type="submit">Restaurar esta versão</button>
+            </form>
+            <a class="btn btn-secondary" th:href="@{/web/versions/document(documentId=${version.documentId})}">Voltar</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <p><strong>ID:</strong> <code class="key" th:text="${version.id}"></code></p>
+        <p><strong>Documento:</strong> <code class="key" th:text="${version.documentId}"></code></p>
+        <p><strong>Descrição da alteração:</strong> <span th:text="${version.changeDescription} ?: '—'"></span></p>
+        <p><strong>Chave de armazenamento:</strong> <code class="key" th:text="${version.storageKey} ?: '—'"></code></p>
+        <p><strong>Tamanho:</strong> <span th:text="${version.fileSize} != null ? ${version.fileSize} + ' bytes' : '—'"></span></p>
+        <p><strong>Checksum:</strong> <span th:text="${version.checksum} ?: '—'"></span></p>
+        <p><strong>Criado por:</strong> <span th:text="${version.createdBy} ?: '—'"></span></p>
+        <p><strong>Criado em:</strong> <span th:text="${version.createdAt}"></span></p>
+    </div>
+</main>
+</body>
+</html>

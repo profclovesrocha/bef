@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Documento')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <div class="toolbar">
+        <h1 th:text="${document.name}"></h1>
+        <div class="actions">
+            <a class="btn btn-secondary" th:href="@{/web/documents/{id}/edit(id=${document.id})}">Editar</a>
+            <a class="btn btn-secondary" th:href="@{/web/documents/{id}/download(id=${document.id})}">Download</a>
+            <a class="btn btn-secondary" th:href="@{/web/documents}">Voltar</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <p><strong>Descrição:</strong> <span th:text="${document.description} ?: '—'"></span></p>
+        <p><strong>Tipo de arquivo:</strong> <span th:text="${document.fileType} ?: '—'"></span></p>
+        <p><strong>Tamanho:</strong> <span th:text="${document.fileSize} != null ? ${document.fileSize} + ' bytes' : '—'"></span></p>
+        <p><strong>Chave de armazenamento:</strong> <code class="key" th:text="${document.storageKey} ?: '—'"></code></p>
+        <p><strong>Versão atual:</strong> <span class="badge" th:text="${document.currentVersion}"></span></p>
+        <p><strong>Criado por:</strong> <span th:text="${document.createdBy} ?: '—'"></span></p>
+        <p><strong>Criado em:</strong> <span th:text="${document.createdAt}"></span></p>
+        <p><strong>Atualizado em:</strong> <span th:text="${document.updatedAt}"></span></p>
+        <p><strong>ID:</strong> <code class="key" th:text="${document.id}"></code></p>
+    </div>
+</main>
+</body>
+</html>

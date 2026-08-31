@@ -1,0 +1,15 @@
+com\docmanager\document\client\MetadataClient.class
+com\docmanager\document\service\DocumentServiceImpl.class
+com\docmanager\document\client\MetadataClient$1.class
+com\docmanager\document\client\StorageClient.class
+com\docmanager\document\mapper\DocumentMapper.class
+com\docmanager\document\client\VersionClient.class
+com\docmanager\document\entity\Document$DocumentBuilder.class
+com\docmanager\document\controller\DocumentController.class
+com\docmanager\document\repository\DocumentRepository.class
+com\docmanager\document\web\DocumentWebController.class
+com\docmanager\document\service\DocumentService.class
+com\docmanager\document\client\StorageClient$1.class
+com\docmanager\document\config\AppConfig.class
+com\docmanager\document\entity\Document.class
+com\docmanager\document\DocumentServiceApplication.class

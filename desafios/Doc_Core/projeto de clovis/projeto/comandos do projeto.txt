@@ -1,0 +1,33 @@
+# Compilar todos os módulos
+mvn clean compile
+
+# Rodar todos os testes
+mvn clean test
+
+# Subir o Document Service (porta 8081)
+cd docmanager-document-service
+mvn spring-boot:run
+
+# Em outro terminal, subir o Storage Service (porta 8082)
+cd docmanager-storage-service
+mvn spring-boot:run
+
+# Subir Metadata Service (porta 8083)
+cd docmanager-metadata-service
+mvn spring-boot:run
+
+# Subir Version Service (porta 8084)
+cd docmanager-version-service
+mvn spring-boot:run
+
+# começar o site
+mvn spring-boot:run
+
+| Recurso | URL |
+|---------|-----|
+| Swagger UI (Document) | http://localhost:8081/swagger-ui.html |
+| Swagger UI (Storage) | http://localhost:8082/swagger-ui.html |
+| Swagger UI (Metadata) | http://localhost:8083/swagger-ui.html |
+| Swagger UI (Version) | http://localhost:8084/swagger-ui.html |
+| H2 Console | http://localhost:8081/h2-console |
+| Actuator Health | http://localhost:8081/actuator/health |

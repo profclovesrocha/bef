@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.docmanager.version.service.VersionServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.000 s -- in com.docmanager.version.service.VersionServiceImplTest

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${document != null} ? 'Editar Documento' : 'Novo Documento')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: header}"></div>
+<main>
+    <h1 th:text="${document != null} ? 'Editar documento' : 'Novo documento'"></h1>
+    <p class="subtitle">Preencha os dados abaixo.</p>
+
+    <div class="alert alert-error" th:if="${error}" th:text="${error}"></div>
+
+    <div class="card">
+        <!-- Criação (multipart, com upload de arquivo) -->
+        <form th:if="${document == null}" method="post" th:action="@{/web/documents}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Nome *</label>
+                <input type="text" name="name" required maxlength="255"/>
+            </div>
+            <div class="form-group">
+                <label>Descrição</label>
+                <textarea name="description" maxlength="1000"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Criado por</label>
+                <input type="text" name="createdBy" maxlength="255"/>
+            </div>
+            <div class="form-group">
+                <label>Arquivo (opcional)</label>
+                <input type="file" name="file"/>
+            </div>
+            <button class="btn btn-primary" type="submit">Salvar</button>
+            <a class="btn btn-secondary" th:href="@{/web/documents}">Cancelar</a>
+        </form>
+
+        <!-- Edição (apenas nome/descrição, sem arquivo) -->
+        <form th:if="${document != null}" method="post" th:action="@{/web/documents/{id}(id=${document.id})}">
+            <div class="form-group">
+                <label>Nome *</label>
+                <input type="text" name="name" required maxlength="255" th:value="${document.name}"/>
+            </div>
+            <div class="form-group">
+                <label>Descrição</label>
+                <textarea name="description" maxlength="1000" th:text="${document.description}"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Atualizar</button>
+            <a class="btn btn-secondary" th:href="@{/web/documents/{id}(id=${document.id})}">Cancelar</a>
+        </form>
+    </div>
+</main>
+</body>
+</html>

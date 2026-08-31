@@ -1,0 +1,172 @@
+# ==============================================================
+# DocManager - Docker Compose
+# Orquestra API Gateway + 4 microsserviços + PostgreSQL
+# ==============================================================
+# Uso:
+#   docker-compose up -d          → Sobe tudo
+#   docker-compose up gateway     → Sobe gateway + todas dependências
+#   docker-compose logs -f        → Acompanha logs
+#   docker-compose down -v        → Para e remove volumes
+# ==============================================================
+
+services:
+
+  # ============================================
+  # PostgreSQL - Banco de dados compartilhado
+  # ============================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: docmanager-postgres
+    environment:
+      POSTGRES_USER: docmanager
+      POSTGRES_PASSWORD: docmanager
+      POSTGRES_MULTIPLE_DATABASES: docmanager,docmanager_metadata,docmanager_version
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/init-databases.sh:/docker-entrypoint-initdb.d/init-databases.sh
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docmanager"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - docmanager-network
+
+  # ============================================
+  # Storage Service (porta 8082)
+  # ============================================
+  storage-service:
+    build:
+      context: .
+      dockerfile: docmanager-storage-service/Dockerfile
+    container_name: docmanager-storage
+    ports:
+      - "8082:8082"
+    volumes:
+      - storage-data:/app/storage-data
+    environment:
+      DOCMANAGER_STORAGE_TYPE: LOCAL
+      DOCMANAGER_STORAGE_LOCAL_PATH: /app/storage-data
+    networks:
+      - docmanager-network
+    restart: unless-stopped
+
+  # ============================================
+  # Metadata Service (porta 8083)
+  # ============================================
+  metadata-service:
+    build:
+      context: .
+      dockerfile: docmanager-metadata-service/Dockerfile
+    container_name: docmanager-metadata
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/docmanager_metadata
+      SPRING_DATASOURCE_USERNAME: docmanager
+      SPRING_DATASOURCE_PASSWORD: docmanager
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - docmanager-network
+    restart: unless-stopped
+
+  # ============================================
+  # Version Service (porta 8084)
+  # ============================================
+  version-service:
+    build:
+      context: .
+      dockerfile: docmanager-version-service/Dockerfile
+    container_name: docmanager-version
+    ports:
+      - "8084:8084"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/docmanager_version
+      SPRING_DATASOURCE_USERNAME: docmanager
+      SPRING_DATASOURCE_PASSWORD: docmanager
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - docmanager-network
+    restart: unless-stopped
+
+  # ============================================
+  # Document Service (porta 8081) - Orquestrador
+  # ============================================
+  document-service:
+    build:
+      context: .
+      dockerfile: docmanager-document-service/Dockerfile
+    container_name: docmanager-document
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/docmanager
+      SPRING_DATASOURCE_USERNAME: docmanager
+      SPRING_DATASOURCE_PASSWORD: docmanager
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      DOCMANAGER_SERVICES_STORAGE_URL: http://storage-service:8082
+      DOCMANAGER_SERVICES_METADATA_URL: http://metadata-service:8083
+      DOCMANAGER_SERVICES_VERSION_URL: http://version-service:8084
+    depends_on:
+      postgres:
+        condition: service_healthy
+      storage-service:
+        condition: service_started
+      metadata-service:
+        condition: service_started
+      version-service:
+        condition: service_started
+    networks:
+      - docmanager-network
+    restart: unless-stopped
+
+  # ============================================
+  # API Gateway (porta 8080) — Ponto de entrada
+  # ============================================
+  gateway:
+    build:
+      context: .
+      dockerfile: docmanager-gateway/Dockerfile
+    container_name: docmanager-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      DOCMANAGER_SERVICES_DOCUMENT_URL: http://document-service:8081
+      DOCMANAGER_SERVICES_STORAGE_URL: http://storage-service:8082
+      DOCMANAGER_SERVICES_METADATA_URL: http://metadata-service:8083
+      DOCMANAGER_SERVICES_VERSION_URL: http://version-service:8084
+    depends_on:
+      - document-service
+      - storage-service
+      - metadata-service
+      - version-service
+    networks:
+      - docmanager-network
+    restart: unless-stopped
+
+# ============================================
+# Volumes persistentes
+# ============================================
+volumes:
+  postgres-data:
+    driver: local
+  storage-data:
+    driver: local
+
+# ============================================
+# Rede interna dos microsserviços
+# ============================================
+networks:
+  docmanager-network:
+    driver: bridge
