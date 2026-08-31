@@ -10,5 +10,5 @@
 # Atenção - Entregas apenas aqui
 - Realize as entregas aqui, nesta pasta.
 - Exercícios;
-- Desafios;
+- Desafios; Desafio 01 ok!31/Agosto/2026.
 - Projetos.
