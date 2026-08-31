@@ -25,6 +25,8 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Ian Medeiros Martins
 - Guilherme lins Guerra
 - Luiz Henrique Nolasco de Lira
+- Gabriel Arruda Caricchio
+- Ingrid Motta Santos
 
 # BEF Groups
 - Leader / FRAMEWORKS 
