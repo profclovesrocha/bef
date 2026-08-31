@@ -20,7 +20,10 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Isaac Alves Camelo Pessoa
 - Emanuelly Araujo Alves de Lima
 - Hanna Peixoto Parente de Araujo 
-- Pedro henrique josé de Oliveira Silva 
+- Pedro henrique josé de Oliveira Silva
+- Vinícius Gaspar de Araújo Silva
+- Ian Medeiros Martins
+- Guilherme lins Guerra
 
 # BEF Groups
 - Leader / FRAMEWORKS 
@@ -28,7 +31,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 2. Arthur Marcos / Spring Boot
 3. Eduardo / Flask
 4. Vinicius / Flask
-5. Ian / Flask
+5. Ian Medeiros, Vinícius Gaspar, Guilherme Lins, Renan Victor / Flask
 6. Gabriel Arruda, João Marcos / Spring Boot
 7. Maria Vitória,Gheovana,Sérgio / Spring Boot
 8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose  / Spring Boot
