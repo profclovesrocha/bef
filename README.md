@@ -19,6 +19,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Sérgio José Galdino da Silva Junior 
 - Isaac Alves Camelo Pessoa
 - Emanuelly Araujo Alves de Lima
+- Hanna Peixoto Parente de Araujo 
 
 # BEF Groups
 - Leader / FRAMEWORKS 
