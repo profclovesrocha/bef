@@ -28,7 +28,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 5. Ian / Flask
 6. Gabriel Arruda, João Marcos / Spring Boot
 7. Maria Vitória,Gheovana,Sérgio / Spring Boot
-8. Daniel / Spring Boot
+8. Daniel William, Emanuelly Araujo / Spring Boot
 9. Luiz Henrique Nolasco / JS
 10. Isaac Alves / JS
 
