@@ -40,6 +40,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose, Ingrid Motta Santos  / Spring Boot
 9. Luiz Henrique Nolasco / JS
 10. Isaac Alves / JS
+11. Lucas Correia / JS
 
 # Mind Map 
 <img width="4080" height="5337" alt="NotebookLM Mind Map (8)" src="https://github.com/user-attachments/assets/896df117-13a3-41cc-a515-5a082ca2c981" />
