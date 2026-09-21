@@ -39,7 +39,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 7. Maria Vitória,Gheovana,Sérgio / Spring Boot
 8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose, Ingrid Motta Santos  / Spring Boot
 9. Luiz Henrique Nolasco / JS
-10. Isaac Alves / JS
+10. Isaac Alves, João Vitor Oliveira, Samuel Feliciano/ JS
 11. Lucas Correia / JS
 
 # Mind Map 
