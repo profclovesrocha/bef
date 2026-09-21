@@ -1,0 +1,37 @@
+### Criar evento (esperado: 201 e um id gerado)
+POST http://localhost:8080/eventos
+Content-Type: application/json
+
+{
+  "nome": "Java Day Recife",
+  "local": "Recife",
+  "data": "2026-10-10T09:00:00",
+  "vagas": 100
+}
+
+### Criar outro evento (esperado: 201)
+POST http://localhost:8080/eventos
+Content-Type: application/json
+
+{
+  "nome": "Spring Meetup",
+  "local": "Olinda",
+  "data": "2026-10-11T14:00:00",
+  "vagas": 50
+}
+
+### Testar validação (esperado: 400 com mensagem)
+POST http://localhost:8080/eventos
+Content-Type: application/json
+
+{
+  "nome": "Java Day Recife",
+  "local": "Recife",
+  "data": "2026-10-10T09:00:00",
+  "vagas": 0
+}
+
+### ATIVIDADE: esta chamada só funciona depois que você implementar a rota.
+# Antes da atividade: 405 Method Not Allowed (já existe POST no mesmo caminho).
+# Depois da atividade: 200 e um array JSON.
+GET http://localhost:8080/eventos
