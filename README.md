@@ -27,20 +27,27 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Luiz Henrique Nolasco de Lira
 - Gabriel Arruda Caricchio
 - Ingrid Motta Santos
+- Kauã Victor Dias de Lima
+- Vinicius Vicente Ferreira
+- Arthur Alexandre Montenegro Silvestre
+- Gabriel Vieira de Lima
+- Paulo Bruno Santa Rosa
+- Ruan Miguel Correia dos Santos
 
 # BEF Groups
 - Leader / FRAMEWORKS 
 1. Cauã / JS
 2. Arthur Marcos / Spring Boot
 3. Eduardo / Flask
-4. Vinicius / Flask
+4. Vinicius Vicente, Kauã Victor, Arthur Alexandre, Gabriel Vieira, Paulo Bruno, Ruan miguel / Flask
 5. Ian Medeiros, Vinícius Gaspar, Guilherme Lins, Renan Victor / Flask
-6. Gabriel Arruda, João Marcos,Alexandre Costa, Arthur Moraes, Jonathan Freitas, Kauã Vinicius Correia,Marcos Matheus/ Spring Boot
+6. Gabriel Arruda, João Marcos,Alexandre Costa, Arthur Moraes, Jonathan Freitas, Kauã Vinicius Correia,Marcos Matheus / Spring Boot
 7. Maria Vitória,Gheovana,Sérgio / Spring Boot
 8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose, Ingrid Motta Santos  / Spring Boot
 9. Luiz Henrique Nolasco / JS
 10. Isaac Alves, João Vitor Oliveira, Samuel Feliciano/ Spring Boot
 11. Lucas Correia / JS
+12. 
 
 # Mind Map 
 <img width="4080" height="5337" alt="NotebookLM Mind Map (8)" src="https://github.com/user-attachments/assets/896df117-13a3-41cc-a515-5a082ca2c981" />
