@@ -47,7 +47,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose, Ingrid Motta Santos  / Spring Boot
 9. Luiz Henrique Nolasco / JS
 10. Isaac Alves, João Vitor Oliveira, Samuel Feliciano/ Spring Boot
-11. Lucas Correia / JS
+11. Lucas Correia, Cauã Castro, João Victor Silva Arruda, George Guilherme / JS
 12. 
 
 # Mind Map 
