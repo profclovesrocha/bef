@@ -5,7 +5,8 @@
 The coordination and administration of Uninassau Olinda have decided that the second-semester assessments (Assessment 2 – AV2) will be split between projects and a written exam—that is, two assessment components—with the project accounting for 80% and written exam for 20% of the AV2 grade.
 - Practice Test for Written Exams (ENADE Style): https://abre.ai/bef-enade-style
 - Back-End Frameworks Practice Test: https://share.gemini.google/Ihhb9ATCtLM0
-- [ ] AVALIAR O DOCENTE: https://forms.gle/RQhogCvz14XVhdYJ7 
+- [ ] AVALIAR O DOCENTE: https://forms.gle/RQhogCvz14XVhdYJ7
+- [ ] ARTIGO MODELO SBC: https://docs.google.com/document/d/1A4OuonGVUAA2BFqiwO7G-Sgv_p9hVflJ/edit?usp=sharing&ouid=108408112299246283853&rtpof=true&sd=true
   
 # Grading
 - AV1 Written Exam (ENADE style)
