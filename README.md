@@ -7,6 +7,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Back-End Frameworks Practice Test: https://share.gemini.google/Ihhb9ATCtLM0
 - [ ] AVALIAR O DOCENTE: https://forms.gle/RQhogCvz14XVhdYJ7
 - [ ] ARTIGO MODELO SBC: https://docs.google.com/document/d/1A4OuonGVUAA2BFqiwO7G-Sgv_p9hVflJ/edit?usp=sharing&ouid=108408112299246283853&rtpof=true&sd=true
+- [ ] CBSOFT SBC: https://cbsoft.sbc.org.br/2026/pt/software-livre/
   
 # Grading
 - AV1 Written Exam (ENADE style)
