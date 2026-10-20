@@ -19,7 +19,6 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Marcos Matheus Gomes Nerys 
 - Maria Vitória Albuquerque Cunha 
 - Gheovana Pietra Araújo dos Santos 
-- Sérgio José Galdino da Silva Junior 
 - Isaac Alves Camelo Pessoa
 - Emanuelly Araujo Alves de Lima
 - Hanna Peixoto Parente de Araujo 
@@ -45,7 +44,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 4. Vinicius Vicente, Kauã Victor, Arthur Alexandre, Gabriel Vieira, Paulo Bruno, Ruan miguel / Flask
 5. Ian Medeiros, Vinícius Gaspar, Guilherme Lins, Renan Victor / Flask
 6. Gabriel Arruda, João Marcos,Alexandre Costa, Arthur Moraes, Jonathan Freitas, Kauã Vinicius Correia,Marcos Matheus / Spring Boot
-7. Maria Vitória,Gheovana,Sérgio / Spring Boot
+7. Maria Vitória,Gheovana, / Spring Boot
 8. Daniel William, Emanuelly Araujo, Hanna Parente, Pedro henrique jose, Ingrid Motta Santos  / Spring Boot
 9. Luiz Henrique Nolasco / JS
 10. Isaac Alves, João Vitor Oliveira, Samuel Feliciano/ Spring Boot
