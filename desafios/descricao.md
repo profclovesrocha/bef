@@ -12,3 +12,4 @@
 - Exercícios;
 - Desafios; Desafio 01 ok!31/Agosto/2026.
 - Projetos.
+- Resumo do BEF_PodCast 16/Nov/2026 (Entregas por Equipe).
