@@ -8,6 +8,8 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - [ ] AVALIAR O DOCENTE: https://forms.gle/RQhogCvz14XVhdYJ7
 - [ ] ARTIGO MODELO SBC: https://docs.google.com/document/d/1A4OuonGVUAA2BFqiwO7G-Sgv_p9hVflJ/edit?usp=sharing&ouid=108408112299246283853&rtpof=true&sd=true
 - [ ] CBSOFT SBC: https://cbsoft.sbc.org.br/2026/pt/software-livre/
+- [ ] Ouça o PodCast: [https://notebooklm.link.google/OiwrIObPnXdx](https://abre.ai/befpodcast)
+
   
 # Grading
 - AV1 Written Exam (ENADE style)
