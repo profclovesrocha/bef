@@ -49,7 +49,6 @@ The coordination and administration of Uninassau Olinda have decided that the se
 9. Luiz Henrique Nolasco / JS
 10. Isaac Alves, João Vitor Oliveira, Samuel Feliciano/ Node.js
 11. Lucas Correia, Cauã Castro, João Victor Silva Arruda, George Guilherme / JS
-12. 
 
 # Mind Map 
 <img width="4080" height="5337" alt="NotebookLM Mind Map (8)" src="https://github.com/user-attachments/assets/896df117-13a3-41cc-a515-5a082ca2c981" />
