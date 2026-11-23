@@ -8,7 +8,9 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - [ ] AVALIAR O DOCENTE: https://forms.gle/RQhogCvz14XVhdYJ7
 - [ ] ARTIGO MODELO SBC: https://docs.google.com/document/d/1A4OuonGVUAA2BFqiwO7G-Sgv_p9hVflJ/edit?usp=sharing&ouid=108408112299246283853&rtpof=true&sd=true
 - [ ] CBSOFT SBC: https://cbsoft.sbc.org.br/2026/pt/software-livre/
-- [ ] Ouça o PodCast: https://abre.ai/befpodcast 
+- [ ] Ouça o PodCast: https://abre.ai/befpodcast
+- [ ] Live - Normalização. ⚠️ NÃO APAGUE! | EXTRA 01 🔴 LIVE 01 - Como trabalhar com Banco de Dados? da modelagem a implementação! https://www.youtube.com/live/r-jxUkxg2Zw?si=rRQ1QhsyLtqLKHKo
+Class Review | Cyber Data Base SQL SEGURO - EXTRA 02 🔴 LIVE 02 https://www.youtube.com/live/usQlMBfvsSQ?si=cR5onzxuF_bDnIST
 
   
 # Grading
